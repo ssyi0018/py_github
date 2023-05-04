@@ -19,4 +19,4 @@ parameters = [
 
 print("PAIRWISE:")
 for i, pairs in enumerate(AllPairs(parameters, filter_func=is_valid_combination)):
-    print("用例编号{:2d}: {}".format(i, pairs))
+    print("用例编号{:3d}: {}".format(i, pairs))
