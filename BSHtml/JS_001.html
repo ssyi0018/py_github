@@ -5,21 +5,43 @@
     <title>Title</title>
 </head>
 <body>
-    <ul id="city">
+<input type="text" placeholder="请输入内容" id="txt"/>
+<input type="button" value="点击添加" onclick="addcity()">
+<ul id="city">
+</ul>
+<ul id="city1">
+</ul>
 
-    </ul>
+<script type="text/javascript">
+    var citylist = ['北京', '上海', '南京']
+    for (var idx in citylist) {
+        var text = citylist[idx]
 
-    <script type="text/javascript">
-        var citylist = ['北京','上海','南京']
-        for (var idx in citylist){
-            var text = citylist[idx]
+        var tag = document.createElement('li')
+        tag.innerText = text
 
-            var tag = document.createElement('li')
-            tag.innerText = text
+        var ptag = document.getElementById('city')
+        ptag.appendChild(tag)
+    }
 
-            var ptag = document.getElementById('city')
-            ptag.appendChild(tag)
+    function addcity() {
+        var txtTag = document.getElementById('txt')
+        var newTxt = txtTag.value
+
+        if (newTxt.length > 0) {
+            var liTag = document.createElement("li")
+            liTag.innerText = newTxt
+
+            var prTag = document.getElementById("city1")
+            prTag.appendChild(liTag)
+
+            txtTag.value = ""
+        } else {
+            alert('请输入内容')
         }
-    </script>
+
+
+    }
+</script>
 </body>
 </html>
