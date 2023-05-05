@@ -5,8 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-    <div>
+    <ul id="city">
 
-    </div>
+    </ul>
+
+    <script type="text/javascript">
+        var citylist = ['北京','上海','南京']
+        for (var idx in citylist){
+            var text = citylist[idx]
+
+            var tag = document.createElement('li')
+            tag.innerText = text
+
+            var ptag = document.getElementById('city')
+            ptag.appendChild(tag)
+        }
+    </script>
 </body>
 </html>
