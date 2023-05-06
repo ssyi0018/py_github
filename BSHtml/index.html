@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../Static/plugins/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+    <link href="../Static/plugins/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <input type="text" id="dt" class="form-control" placeholder="日期">
+</div>
+
+
+<script src="../Static/js/jquery-3.6.4.min.js"></script>
+<script src="../Static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+<script src="../Static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../Static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+
+
+<script>
+    $(function () {
+        $('#dt').datepicker({
+            format: 'yyyy-mm-dd',
+            startDate: '0',
+            language: 'zh-CN',
+            // todayBtn: true, //显示今日按钮
+            autoclose: true,
+            // todayHighlight: true, // 今日高亮显示
+            // minView: "month", // 最小视图为月份，如果为 day 的话还会让你选小时
+
+        })
+    })
+
+</script>
+</body>
+</html>
