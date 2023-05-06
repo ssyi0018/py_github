@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .menus {
+            width: 200px;
+            height: 800px;
+            border: 1px solid rebeccapurple;
+        }
+
+        .menus .header {
+            background-color: #00c4ff;
+            padding: 10px 5px;
+            border-bottom: 1px dotted #9a8461;
+            cursor: pointer;
+        }
+
+        .menus .content a {
+            display: block;
+            padding: 5px 5px;
+            border-bottom: 1px dotted #c2c0bd;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menus">
+    <div class="item">
+        <div class="header" onclick="clickme(this)">上海</div>
+        <div class="content">
+            <a>世纪大道</a>
+            <a>浦东新区</a>
+        </div>
+    </div>
+    <div class="item">
+        <div class="header" onclick="clickme(this)">南京</div>
+        <div class="content hide">
+            <a>鼓楼</a>
+            <a>建邺</a>
+        </div>
+    </div>
+
+</div>
+<script src="../Static/js/jquery-3.6.4.min.js"></script>
+<script>
+    function clickme(self) {
+        $(self).next().removeClass("hide")
+        $(self).parent().siblings().find('.content').addClass('hide')
+
+        // var hsc = $(self).next().hasClass("hide")
+        // if (hsc) {
+        //     $(self).next().removeClass("hide")
+        // }else{
+        //     $(self).next().addClass("hide")
+        // }
+    }
+</script>
+</body>
+</html>
